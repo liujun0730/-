@@ -1,170 +1,228 @@
-/* 基础样式 */
-body {
-    font-family: 'Microsoft YaHei', sans-serif;
-    line-height: 1.6;
-    color: #333;
+/* 全局样式 */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
+    font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
 }
 
 .container {
-    max-width: 100%;
-    margin: 0;
-    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+/* 主内容区域布局 */
+.main-content {
+    display: flex;
+    gap: 20px;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    flex: 1;
+    max-width: 350px;
+}
+
+.form-container, .search-container {
     background-color: white;
-    box-sizing: border-box;
-    min-height: 100vh;
-}
-
-/* 微信浏览器特有样式 */
-body {
-    -webkit-text-size-adjust: 100% !important;
-    text-size-adjust: 100% !important;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-/* 优化移动端显示 */
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 16px;
-    }
-    
-    .pdf-header {
-        padding: 20px 0;
-    }
-    
-    .pdf-header h1 {
-        font-size: 1.5rem;
-    }
-    
-    h2 {
-        font-size: 1.3rem;
-        padding: 8px 12px;
-    }
-    
-    table {
-        font-size: 14px;
-    }
-    
-    th, td {
-        padding: 8px;
-    }
-}
-
-/* 页眉 */
-.pdf-header {
-    text-align: center;
-    padding: 30px 0;
-    margin-bottom: 30px;
-    background-color: #3498db;
-    color: white;
+    padding: 20px;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.pdf-header h1 {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: #e0e0e0;
-    font-size: 1.2rem;
-}
-
-/* 一级标题 */
-h2 {
-    color: #2c3e50;
-    border-bottom: none;
-    padding: 10px 15px;
-    margin-bottom: 15px;
-    background-color: #e3f2fd;
-    border-radius: 3px;
-}
-
-/* 内容区块 */
-section {
-    margin-bottom: 30px;
-    page-break-inside: avoid;
-}
-
-h2 {
-    color: #2c3e50;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+.form-group {
     margin-bottom: 15px;
 }
 
-/* 列表样式 */
-ul, ol {
-    padding-left: 20px;
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-li {
-    margin-bottom: 8px;
-}
-
-/* 表格样式 */
-table {
+input, select {
     width: 100%;
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-th, td {
+    padding: 10px;
     border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-th {
-    background-color: #f2f2f2;
-}
-
-/* 联系方式 */
-.contact {
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-/* 页脚 */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
-    border-top: 1px solid #eee;
-}
-
-.print-btn {
-    background-color: #3498db;
+.btn {
+    background-color: #4a6fa5;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 15px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
-    margin-top: 15px;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-.print-btn:hover {
-    background-color: #2980b9;
+.btn:hover {
+    background-color: #3a5a80;
+}
+
+/* 日历样式 */
+.calendar-container {
+    flex: 2;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    border-radius: 4px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.calendar-day {
+    min-height: 100px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.day-number {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.other-month {
+    background-color: #f9f9f9;
+    color: #aaa;
+}
+
+.today {
+    background-color: #e6f0ff;
+    border: 2px solid #4a6fa5;
+}
+
+.has-courses {
+    background-color: #e6ffe6;
+}
+
+.course-item {
+    font-size: 12px;
+    background-color: #4a6fa5;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.course-item:hover {
+    background-color: #3a5a80;
+}
+
+/* 模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 60%;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.course-detail {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.course-detail h3 {
+    margin-bottom: 5px;
+    color: #4a6fa5;
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
+    .main-content {
+        flex-direction: column;
     }
     
-    .pdf-header h1 {
-        font-size: 1.5rem;
+    .sidebar {
+        max-width: 100%;
     }
     
-    th, td {
-        padding: 8px;
+    .calendar-day {
+        min-height: 80px;
+    }
+    
+    .modal-content {
+        width: 90%;
     }
 }

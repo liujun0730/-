@@ -1,155 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025年人工智能训练师（三级）招生简章</title>
-    <style>
-        body {
-            font-family: 'Microsoft YaHei', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 15px;
-            background-color: #f9f9f9;
-        }
-        .container {
-            max-width: 100%;
-            background-color: white;
-            padding: 15px;
-            border-radius: 5px;
-        }
-        .header {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #3498db;
-            color: white;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            font-size: 16px;
-            color: #e0e0e0;
-        }
-        h2 {
-            font-size: 18px;
-            color: #2c3e50;
-            background-color: #e3f2fd;
-            padding: 8px 12px;
-            border-radius: 3px;
-        }
-        ul, ol {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-            font-size: 14px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .contact {
-            background-color: #f8f9fa;
-            padding: 12px;
-            border-radius: 5px;
-            margin-top: 15px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-            font-size: 14px;
-        }
-    </style>
+    <title>课程与讲师管理系统</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>2025年人工智能训练师（三级）招生简章</h1>
-            <p class="subtitle">黄金职业赛道！掌握AI核心技能，开启职业新跃迁</p>
-        </div>
-
-        <div>
-            <h2>一、培训核心价值</h2>
-            <ul>
-                <li>硬核目标：精通AI模型训练、数据标注与调优，独立解决复杂场景问题，防治过拟合</li>
-                <li>实用内容：覆盖AI模型开发/训练/协作全流程，含Python编程、大数据处理、智能产品优化等</li>
-            </ul>
-
-            <h2>二、报考门槛（满足其一即可）</h2>
-            <ol>
-                <li>本职业/相关职业工作满10年</li>
-                <li>持四级证书+4年相关工作经验</li>
-                <li>持初级职称+1年相关工作经验</li>
-                <li>技工院校高级工班及以上学历（含应届生）</li>
-                <li>持四级证书+专科及以上相关学历（含应届生）</li>
-            </ol>
-            <p style="font-size:13px;color:#666;">相关职业：人工智能工程技术人员、呼叫中心服务员等；装备制造/电气信息/教育体育大类专业可报</p>
-
-            <h2>三、课程安排</h2>
-            <table>
-                <tr>
-                    <th>时间</th>
-                    <th>核心内容</th>
-                    <th>授课形式</th>
-                </tr>
-                <tr>
-                    <td>9月中旬</td>
-                    <td>AI训练师理论、Python编程基础</td>
-                    <td>理论+实操</td>
-                </tr>
-                <tr>
-                    <td>9月下旬</td>
-                    <td>智能产品数据分析、模型部署</td>
-                    <td>理论+实操</td>
-                </tr>
-                <tr>
-                    <td>10月中旬</td>
-                    <td>大数据清洗、训练数据集准备</td>
-                    <td>理论+实操</td>
-                </tr>
-                <tr>
-                    <td>10月下旬</td>
-                    <td>模型调优、训练指导</td>
-                    <td>理论+实操</td>
-                </tr>
-            </table>
-
-            <h2>四、费用与补贴</h2>
-            <ul>
-                <li>总费用：2600元（培训费2000元+教材费100元+考务费500元）</li>
-                <li>高额补贴：在职人员最高补4400元，沪籍失业人员最高补5050元（以最新政策为准）</li>
-            </ul>
-
-            <h2>五、权威保障</h2>
-            <ul>
-                <li>证书全国联网可查：登录市人社局官网、技能人才评价工作网查询</li>
-                <li>正规机构：上海普陀区人社局批准设立，专注能力培养与企业赋能</li>
-            </ul>
-            <div class="contact">
-                <p>📍校址：上海市普陀区中山北路2790号杰地大厦901-902室</p>
-                <p>📱扫码了解详情，抢占AI职业先机！</p>
+        <header>
+            <h1>课程与讲师管理系统</h1>
+        </header>
+        
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="form-container">
+                    <h2>添加课程信息</h2>
+                    <form id="course-form">
+                        <div class="form-group">
+                            <label for="date">日期:</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="course-name">课程名称:</label>
+                            <input type="text" id="course-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="teacher-name">讲师姓名:</label>
+                            <input type="text" id="teacher-name" required>
+                        </div>
+                        <button type="submit" class="btn">保存</button>
+                    </form>
+                </div>
+                
+                <div class="search-container">
+                    <h2>查询课程信息</h2>
+                    <div class="form-group">
+                        <label for="search-type">查询类型:</label>
+                        <select id="search-type">
+                            <option value="course">按课程名称</option>
+                            <option value="teacher">按讲师姓名</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="search-term">查询内容:</label>
+                        <input type="text" id="search-term">
+                    </div>
+                    <button id="search-btn" class="btn">查询</button>
+                    <button id="clear-search-btn" class="btn">清除查询</button>
+                </div>
+            </div>
+            
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prev-month" class="btn">上个月</button>
+                    <h2 id="month-year">2023年9月</h2>
+                    <button id="next-month" class="btn">下个月</button>
+                </div>
+                <div class="weekdays">
+                    <div>周日</div>
+                    <div>周一</div>
+                    <div>周二</div>
+                    <div>周三</div>
+                    <div>周四</div>
+                    <div>周五</div>
+                    <div>周六</div>
+                </div>
+                <div id="calendar" class="calendar-grid"></div>
             </div>
         </div>
-
-        <footer>
-            <p>©2025 AI训练师认证中心 版权所有</p>
-        </footer>
+        
+        <div id="course-details" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>当日课程详情</h2>
+                <div id="course-list"></div>
+            </div>
+        </div>
     </div>
+    
+    <script src="app.js"></script>
 </body>
 </html>
