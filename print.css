@@ -1,0 +1,33 @@
+/* 打印专用样式 */
+body {
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+.pdf-header {
+    page-break-after: avoid;
+}
+
+h1, h2 {
+    page-break-after: avoid;
+}
+
+table {
+    page-break-inside: avoid;
+}
+
+.print-btn {
+    display: none;
+}
+
+@page {
+    size: A4;
+    margin: 2cm;
+}
